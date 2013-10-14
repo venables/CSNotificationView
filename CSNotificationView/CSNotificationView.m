@@ -297,8 +297,9 @@ static NSInteger const kCSNotificationViewEmptySymbolViewTag = 666;
 {
     UIViewController* viewController = self.parentViewController;
     
-    CGRect displayFrame = CGRectMake(0, 0, CGRectGetWidth(viewController.view.frame),
-                                     kCSNotificationViewHeight + viewController.topLayoutGuide.length);
+    CGRect displayFrame = CGRectMake(0, CGRectGetHeight(viewController.view.frame) - kCSNotificationViewHeight,
+                                     CGRectGetWidth(viewController.view.frame),
+                                     kCSNotificationViewHeight);
     
     if ([viewController.view isKindOfClass:[UIScrollView class]]) {
         //Add offset
@@ -312,9 +313,9 @@ static NSInteger const kCSNotificationViewEmptySymbolViewTag = 666;
 {
     UIViewController* viewController = self.parentViewController;
     
-    CGRect offscreenFrame = CGRectMake(0, -kCSNotificationViewHeight - viewController.topLayoutGuide.length,
+    CGRect offscreenFrame = CGRectMake(0, CGRectGetHeight(viewController.view.frame),
                                        CGRectGetWidth(viewController.view.frame),
-                                       kCSNotificationViewHeight + viewController.topLayoutGuide.length);
+                                       kCSNotificationViewHeight);
     
     if ([viewController.view isKindOfClass:[UIScrollView class]]) {
         UIScrollView* scrollView = (UIScrollView*)viewController.view;

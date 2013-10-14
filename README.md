@@ -6,6 +6,8 @@ Also supports displaying progress.
 **Requires iOS 7.**
 
 
+## This is a fork to show the messages from the bottom & not tested with blocking elements, etc
+
 <div style="float: left; text-align: center">
 <img src="https://f.cloud.github.com/assets/956573/1240926/3764db88-2a14-11e3-89d2-c1492b003d33.png" width="30%"></img>
 &nbsp;
